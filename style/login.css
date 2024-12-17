@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    padding: 2rem;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.left-side {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f7f7;
+}
+
+.illustration {
+    max-width: 400px;
+    width: 100%;
+}
+
+.right-side {
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.logo-text {
+    color: #2A5A5A;
+    font-size: 14px;
+    margin-top: 0.5rem;
+}
+
+.signin-form {
+    max-width: 400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 16px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f8f8f8;
+}
+
+input:focus {
+    outline: none;
+    border-color: #B8D8D8;
+    background-color: white;
+}
+
+.signup-link {
+    text-align: left;
+    margin: 1.5rem 0;
+}
+
+.signup-link a {
+    color: #4A90E2;
+    text-decoration: none;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #B8D8D8;
+    border: none;
+    border-radius: 8px;
+    color: #2A5A5A;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #9DC3C3;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .left-side {
+        padding: 2rem;
+    }
+
+    .right-side {
+        padding: 2rem;
+    }
+
+    .illustration {
+        max-width: 300px;
+    }
+}

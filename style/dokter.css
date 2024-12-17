@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #e0ebeb;
+    color: #333;
+}
+
+h1, h2, h3 {
+    color: #2d3436;
+}
+
+h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+}
+
+p {
+    color: #4a4a4a;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #c5e0dc;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2d3436;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #0984e3;
+}
+
+/* Profil Section */
+.profile-section {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: #d3e7e6;
+    border-radius: 15px;
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profile-section img {
+    width: 180px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-info h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-info p {
+    margin-bottom: 0.75rem;
+}
+
+.profile-info ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1rem;
+}
+
+.profile-info ul li {
+    margin-bottom: 0.5rem;
+}
+
+.book-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #c5e0dc;
+    color: #2d3436;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.book-btn:hover {
+    background-color: #a3c9c4;
+    transform: translateY(-2px);
+}
+
+/* Jadwal Section */
+.schedule {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.schedule table {
+    width: 100%;
+    border-collapse: collapse;
+    max-width: 1000px; 
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.schedule table th,
+.schedule table td {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.schedule table th {
+    background-color: #c5e0dc;
+}
+
+/* Set lebar kolom agar sesuai */
+.schedule table th, .schedule table td {
+    width: 14%; /* Menetapkan lebar kolom agar rata */
+}
+
+.btn {
+    background-color: #f1f9f8; 
+    color: #333; 
+    border: 0px solid #333; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    cursor: pointer;
+    font-size: 16px; 
+    transition: background-color 0.3s ease; 
+}
+
+.btn:hover {
+    background-color: #f0f0f0; 
+}
+
+/* Footer */
+.footer {
+    background: white;
+    padding: 4rem 2rem;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around; /* Ubah dari space-between ke space-around atau flex-start */
+    align-items: flex-start;
+    max-width: 900px; /* Atur batas lebar agar lebih kecil */
+    margin: 0 auto;
+    gap: 2rem; /* Tambahkan sedikit gap untuk elemen */
+}
+
+
+.footer-left {
+    text-align: left;
+}
+
+.footer-right {
+    text-align: left;
+}
+
+.footer .logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.contact-info, .social-links {
+    margin-bottom: 1rem;
+}
+
+.social-links img {
+    width: 30px;
+    height: 30px;
+    margin-right: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.social-links img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-left, .footer-right {
+        margin-bottom: 2rem;
+    }
+}

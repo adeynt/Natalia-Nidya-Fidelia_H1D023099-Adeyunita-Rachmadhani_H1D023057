@@ -160,7 +160,7 @@ p {
 
 .social-item span {
     font-size: 1rem;
-    color: #333; /* Warna teks */
+    color: #333; 
 }
 
 @media (max-width: 768px) {

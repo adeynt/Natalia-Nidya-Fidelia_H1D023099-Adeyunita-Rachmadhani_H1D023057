@@ -152,7 +152,7 @@ p {
 }
 
 .layanan-option input {
-    display: none; /* Hide the radio button */
+    display: none; 
 }
 
 .layanan-option label {
@@ -217,11 +217,11 @@ p {
 
 .footer-content {
     display: flex;
-    justify-content: space-around; /* Ubah dari space-between ke space-around atau flex-start */
+    justify-content: space-around; 
     align-items: flex-start;
-    max-width: 900px; /* Atur batas lebar agar lebih kecil */
+    max-width: 900px; 
     margin: 0 auto;
-    gap: 2rem; /* Tambahkan sedikit gap untuk elemen */
+    gap: 2rem; 
 }
 
 

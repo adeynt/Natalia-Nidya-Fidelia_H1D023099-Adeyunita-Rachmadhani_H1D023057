@@ -1,25 +1,21 @@
 <?php
-session_start(); // Tambahkan session_start() di awal file
+session_start();
 include("koneksi.php");
 if (isset($_POST['submit'])) {
     $email = mysqli_real_escape_string($koneksi, $_POST['email']);
     $password = mysqli_real_escape_string($koneksi, $_POST['password']);
 
-    // Ambil data user berdasarkan email
     $result = mysqli_query($koneksi, "SELECT * FROM user WHERE email='$email'") or die("Select Error");
     $row = mysqli_fetch_assoc($result);
 
     if ($row && password_verify($password, $row['password'])) {
-        // Jika password benar
         $_SESSION['valid'] = $row['email'];
         $_SESSION['nama'] = $row['nama'];
         $_SESSION['email'] = $row['email'];
         $_SESSION['logged_in'] = true;
 
-        // Redirect ke homepage dengan alert sukses
         echo "<script>alert('Login Successful!'); window.location.href='../home/homepage.php';</script>";
     } else {
-        // Jika email atau password salah
         echo "<script>alert('Wrong Username or Password'); window.location.href='login.php';</script>";
     }
 } else {

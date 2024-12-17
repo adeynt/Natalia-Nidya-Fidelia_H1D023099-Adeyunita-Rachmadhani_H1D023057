@@ -228,14 +228,14 @@ p {
     margin: 0.5rem 0;
 }
 .service-card ul {
-    list-style-position: inside; /* Posisi bullet di dalam elemen */
-    margin: 0; /* Hapus margin tambahan */
-    padding: 0; /* Hapus padding tambahan */
+    list-style-position: inside; 
+    margin: 0; 
+    padding: 0; 
 }
 
 .service-card li {
-    text-align: justify; /* Pastikan teks rata kiri */
-    margin-left: 1rem; /* Tambahkan sedikit margin kiri untuk estetika */
+    text-align: justify; 
+    margin-left: 1rem; 
 }
 
 

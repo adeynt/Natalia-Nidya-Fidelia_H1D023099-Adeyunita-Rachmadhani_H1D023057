@@ -10,7 +10,6 @@ require_once "library/SMTP.php";
 
 $mail = new PHPMailer;
 
-// Ambil data dari URL parameter
 $emailInput = $_GET['emailInput'];
 $pasien = $_GET['pasien'];
 $waktuBooking = $_GET['waktuBooking'];
@@ -45,7 +44,6 @@ $mail->AltBody = "LINK SI-CARE";
 if(!$mail->send()) {
     echo "Mailer Error: " . $mail->ErrorInfo;
 } else {
-    //echo "Message has been sent successfully";
     header("Location: afterbooking.php");
     exit;
 }

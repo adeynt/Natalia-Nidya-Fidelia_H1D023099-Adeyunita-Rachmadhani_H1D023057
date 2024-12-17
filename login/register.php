@@ -6,20 +6,16 @@ if (isset($_POST['submit'])) {
     $password = mysqli_real_escape_string($koneksi, $_POST['password']);
     $confirm_password = mysqli_real_escape_string($koneksi, $_POST['confirm_password']);
 
-    // Validasi password dan konfirmasi password
     if ($password !== $confirm_password) {
         echo "<script>alert('Passwords do not match. Please try again!'); window.history.back();</script>";
     } else {
-        // Verifikasi email unik
         $verify_query = mysqli_query($koneksi, "SELECT email FROM user WHERE email='$email'");
 
         if (mysqli_num_rows($verify_query) != 0) {
             echo "<script>alert('This email is already used. Try another one, please!'); window.history.back();</script>";
         } else {
-            // Hashing password untuk keamanan
             $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-            // Simpan ke database
             mysqli_query($koneksi, "INSERT INTO user(email, nama, password) VALUES('$email', '$nama', '$hashed_password')") or die("Error Occurred");
 
             echo "<script>alert('Registration successful!'); window.location.href='login.php';</script>";
@@ -84,7 +80,7 @@ if (isset($_POST['submit'])) {
 
         form.addEventListener('submit', function(event) {
             if (password.value !== confirmPassword.value) {
-                event.preventDefault(); // Mencegah pengiriman form
+                event.preventDefault();
                 alert('Passwords do not match. Please try again!');
             }
         });

@@ -8,8 +8,6 @@ tambahBtn();
   <title>
    SI-CARE - Tes Tingkat Keparahan Stres
   </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="../style/testMental.css">
  </head>
  <body>
@@ -347,22 +345,19 @@ tambahBtn();
 </footer>
 <script>
 document.getElementById('submit').addEventListener('click', function () {
-    // Ambil semua pertanyaan
     const questions = document.querySelectorAll('.question');
     let totalScore = 0;
     let allAnswered = true;
 
     questions.forEach((question) => {
-        // Cari radio button yang dipilih dalam setiap pertanyaan
         const selectedOption = question.querySelector('input[type="radio"]:checked');
         if (selectedOption) {
-            totalScore += parseInt(selectedOption.value, 10); // Tambahkan nilai ke total
+            totalScore += parseInt(selectedOption.value, 10); 
         } else {
-            allAnswered = false; // Jika ada pertanyaan yang belum dijawab
+            allAnswered = false;
         }
     });
 
-    // Tampilkan hasil jika semua pertanyaan dijawab
     const scoreElement = document.getElementById('score');
     if (allAnswered) {
         let resultMessage = '';
